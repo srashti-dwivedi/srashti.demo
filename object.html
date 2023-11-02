@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="stylesheet" href="style.css"/>
+</head>
+<body>
+  <center>
+    <h1><i>Please calculate me !</i></h1>
+  <input type="number" id="fvalue" step="any" />
+  <br><br>
+  <input type="number" id="svalue" step="any" />
+  <br><br>
+  <select id="oprend">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">x</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <button onclick="cal()">
+  Calculate
+  </button>
+  <br>
+  <br>
+  <input type="" id="result"  readonly=""/>
+
+  </center>
+</body>
+<script type="text/javascript">
+  function cal(){
+    
+    var x= document.getElementById('fvalue').value;
+   
+    
+    var y= document.getElementById('svalue').value;
+    var ope= document.getElementById('oprend').value;
+   if(ope=='+'){
+   var res = parseInt(x)+parseInt(y);
+   
+
+    }
+  
+    if(ope=='-')
+    {
+      var res = parseInt(x)*parseInt(y);
+    }
+      if(ope=='*')
+      {
+      
+      var res = parseInt(x)*parseInt(y);
+
+    }
+    if(ope=='/')
+      {
+      
+      var res = parseInt(x)/parseInt(y);
+
+    }
+    if(ope=='%')
+      {
+      
+      var res = parseInt(x)%parseInt(y);
+
+    }
+   document.getElementById('result').value=res;
+  
+  }
+  
+</script>
+
+    
+
+</html>
